@@ -30,12 +30,12 @@ hist(globalActivePower, col="red", main="Global Active Power", xlab="Global Acti
 dev.off()
 
 #Generates Plot2
-globalActivePower <- as.numeric(power_info$Global_active_power)
-globalReactivePower <- as.numeric(power_info$Global_reactive_power)
+globalActivePower <- as.numeric(power_info_subset$Global_active_power)
+globalReactivePower <- as.numeric(power_info_subset$Global_reactive_power)
 
 
 png("plot2.png", width=480, height=480)
-plot(power_info$Date_Time, globalActivePower, type="l", xlab="", ylab="Global Active Power (kilowatts)")
+plot(power_info_subset$Date_Time, globalActivePower, type="l", xlab="", ylab="Global Active Power (kilowatts)")
 dev.off()
 
 #Generates Plot Three
